@@ -23,7 +23,10 @@ app.use("/employee-api", employeeAPP)
 async function connectdb() {
     try {
         //await connect("mongodb://localhost:27017/dbname")
-        await connect(process.env.MONGO_URI)///dbname to create or check whether its there or not 
+        if (!process.env.MONGO_URI) {
+            throw new Error("MONGO_URI is not defined in environment variables");
+        }
+        await connect(process.env.MONGO_URI)
         console.log("db connected succesfully")
         //start server after the db is connected 
         app.listen(4000, () => console.log("server on 4000..."))
