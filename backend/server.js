@@ -6,7 +6,7 @@ import { config } from 'dotenv'
 config();
 const app = exp()
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000']
+    origin: ['http://localhost:5173', 'https://employee-management-62yk.onrender.com']
 }))
 
 //add body parser why
