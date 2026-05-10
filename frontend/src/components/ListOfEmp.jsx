@@ -21,13 +21,13 @@ const goToEditEmployee=(empObj)=>{
 
 const deleteEmpBYID=async(id)=>{
  
-  let res =await axios.delete(`https://employee-management-62yk.onrender.com/${id}`,id)
+  let res = await axios.delete(`https://employee-management-62yk.onrender.com/employee-api/employee/${id}`)
   if(res.status===200){
     getEmps();
   }
 }
 async function getEmps(){
-      let res=await fetch('https://employee-management-62yk.onrender.com') //axios.get()
+      let res = await fetch('https://employee-management-62yk.onrender.com/employee-api/employees') //axios.get()
       if(res.status===200){
         let data=await res.json()  //let resObj =res.data
         setEmps(data.payload)   //setEmps(res.obj.payload)
