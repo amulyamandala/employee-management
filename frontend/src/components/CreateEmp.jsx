@@ -45,7 +45,7 @@ function CreateEmp() {
     }
     return (
         <div>
-            <form className="bg-yellow-50 w-155 mx-auto h-100 py-5 rounded-4xl border-2 border-blue-950 shadow-2xl" onSubmit={handleSubmit(onFormSubmit)}>
+            <form className="bg-grey-50 w-155 mx-auto h-100 py-5 rounded-4xl border-2 border-blue-950 shadow-2xl" onSubmit={handleSubmit(onFormSubmit)}>
                 <h1 className='text-center text-3xl text-gray-900 font-extrabold'>Enter new employee details</h1>
                 <input type="text" placeholder='Enter the employee name' {...register("name", { required: "Name is required" })} id="name" className='bg-white block mx-auto  my-6 rounded-1xl border-2 w-60' />
                 {errors.name && <p style={{ color: 'red', textAlign: 'center' }}>{errors.name.message}</p>}
