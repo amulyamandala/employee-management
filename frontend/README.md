@@ -1,26 +1,48 @@
-# React + Vite
+# Employee Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Employee Management System, built with modern web technologies to provide a responsive and user-friendly interface for managing employees.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework:** React 19
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS 4
+- **State Management:** Zustand
+- **Routing:** React Router
+- **Form Handling:** React Hook Form
+- **HTTP Client:** Axios
 
-## React Compiler
+## 📦 Installation & Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd frontend
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Configure Environment Variables:**
+   If your backend is running on a specific URL (other than the default), you may need to configure the API base URL. Check the source code (e.g., Axios setup) for any required `.env` variables like `VITE_API_URL`.
 
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   The application will start on a local development server, usually `http://localhost:5173`.
 
-### paths
-home http://localhost:5173/
-register-http://localhost:5173/register
+## 📜 Available Scripts
 
-# client side routing in react app
+- `npm run dev`: Starts the Vite development server.
+- `npm run build`: Bundles the app into static files for production.
+- `npm run lint`: Runs ESLint to check for code quality issues.
+- `npm run preview`: Previews the production build locally.
 
-### configure routing 
-(connecting components with paths)
+## 📂 Project Structure
+
+- `src/`: Contains the main source code.
+  - `components/`: Reusable React components (CreateEmp, EditEmployee, ListOfEmp, etc.).
+  - `assets/`: Static assets like images.
+- `public/`: Publicly accessible static files.
